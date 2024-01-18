@@ -1,0 +1,26 @@
+﻿@model OurTeamEditViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Edit Team Member</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Job title" asp-for="JobTitle">
+            <span class="text-danger" asp-validation-for="JobTitle"></span>
+        </div>
+        <div class="form-group">
+            <input type="file" class="form-control-file" accept="image/*" asp-for="ImageFile">
+            <span class="text-danger" asp-validation-for="ImageFile"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-primary" asp-action="Index" asp-controller="OurTeams">Return to Index</a>
+    </form>
+
+</div>
+<!-- /.container-fluid -->
